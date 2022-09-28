@@ -1,19 +1,21 @@
-var app = require('./app.js');
-var debug = require('debug')('expressjs-portfolio:server');
-var http = require('http');
+import app from './app.js';
+import debug from 'debug';
+debug('expressjs-portfolio:server');
+
+import http from 'http';
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+const server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -28,7 +30,7 @@ server.on('listening', onListening);
  */
 
 function normalizePort(val) {
-  var port = parseInt(val, 10);
+  let port = parseInt(val, 10);
 
   if (isNaN(port)) {
     // named pipe
