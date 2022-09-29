@@ -1,65 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Racyn Ibaya</title>
-
-    <link rel="icon" href="favicon.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="css/style.css" />
+    <%- include('./components/head.ejs') %>
   </head>
   <body>
     <header class="main-header">
       <nav class="main-nav">
         <span class="logo-container">
-          <a href="#" class="logo"
+          <a href="/" class="logo"
             ><span>RM</span><span class="dot">.I</span></a
           >
         </span>
         <ul class="nav-links">
-          <li class="nav-link about"><a href="#">About</a></li>
-          <li class="nav-link contact"><a href="#">Contact</a></li>
-          <li class="nav-link projects"><a href="#">Projects</a></li>
-          <!-- <li class="navlink hire-me"><a href="#">Hire me</a></li> -->
+          <li class="nav-link about"><a href="about">About</a></li>
+          <li class="nav-link contact"><a href="contact">Contact</a></li>
+          <li class="navlink hire-me"><a href="services">Services</a></li>
+          <li class="nav-link projects"><a href="projects">Projects</a></li>
         </ul>
       </nav>
-      <section class="hero-section">
-        <header class="hero">
-          <h1 class="hero-heading">
-            <span class="main-heading">Racyn Ibaya</span
-            ><span class="sub-heading">Designer and Web Developer</span>
-          </h1>
-          <a href="#" class="btn btn--animated hire-me">Hire me</a>
-        </header>
-        <img
-          src="/assets/wonderingmind.svg"
-          alt="guys whos wondering"
-          class="wondering-guy"
-        />
-      </section>
     </header>
 
-    <!-- <%- include('./partials/' + page + '.ejs') %> -->
+    <main><%- include('./partials/' + page + '.ejs') %></main>
 
-    <section class="skills-section">
-      <i class="fa-brands fa-html5"></i>
-      <i class="fa-brands fa-css3-alt"></i>
-      <i class="fa-brands fa-square-js"></i>
-      <i class="fa-brands fa-react"></i>
-    </section>
+    <footer class="footer"><%- include('./components/footer.ejs') %></footer>
   </body>
 </html>

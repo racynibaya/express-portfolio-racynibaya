@@ -6,12 +6,15 @@ import {
   renderProjectPage,
   renderContactPage,
   renderServicePage,
+  renderRootPage,
 } from '../controllers/index.controller.js';
 
 const indexRouter = express.Router();
 
 /* GET home page. */
-indexRouter.get('/', renderHomePage);
+indexRouter.get('/', renderRootPage);
+
+indexRouter.get('/home', renderHomePage);
 
 indexRouter.get('/about', renderAboutPage);
 
