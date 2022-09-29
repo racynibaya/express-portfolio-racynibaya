@@ -15,7 +15,7 @@ indexRouter.get('/', renderHomePage);
 
 indexRouter.get('/about', renderAboutPage);
 
-indexRouter.get('/projects', renderHomePage);
+indexRouter.get('/projects', renderProjectPage);
 
 indexRouter.get('/contact', renderContactPage);
 

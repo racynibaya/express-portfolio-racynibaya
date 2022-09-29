@@ -37,14 +37,23 @@
           <!-- <li class="navlink hire-me"><a href="#">Hire me</a></li> -->
         </ul>
       </nav>
-      <%- include('./partials/home.ejs') %>
+      <section class="hero-section">
+        <header class="hero">
+          <h1 class="hero-heading">
+            <span class="main-heading">Racyn Ibaya</span
+            ><span class="sub-heading">Designer and Web Developer</span>
+          </h1>
+          <a href="#" class="btn btn--animated hire-me">Hire me</a>
+        </header>
+        <img
+          src="/assets/wonderingmind.svg"
+          alt="guys whos wondering"
+          class="wondering-guy"
+        />
+      </section>
     </header>
 
-    <%- include('./partials/about.ejs') %>
-    <section class="section-projects">
-      <h2>Projects</h2>
-      <div class="projects-container"></div>
-    </section>
+    <!-- <%- include('./partials/' + page + '.ejs') %> -->
 
     <section class="skills-section">
       <i class="fa-brands fa-html5"></i>
