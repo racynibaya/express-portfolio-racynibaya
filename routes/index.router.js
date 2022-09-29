@@ -1,26 +1,24 @@
 import express from 'express';
+
+import {
+  renderAboutPage,
+  renderHomePage,
+  renderProjectPage,
+  renderContactPage,
+  renderServicePage,
+} from '../controllers/index.controller.js';
+
 const indexRouter = express.Router();
 
 /* GET home page. */
-indexRouter.get('/', function (req, res, next) {
-  res.send('Home page');
-  res.render('index', { title: 'Express' });
-});
+indexRouter.get('/', renderHomePage);
 
-indexRouter.get('/about', function (req, res, next) {
-  res.send('About page');
-});
+indexRouter.get('/about', renderAboutPage);
 
-indexRouter.get('/projects', function (req, res, next) {
-  res.send('Projects page');
-});
+indexRouter.get('/projects', renderHomePage);
 
-indexRouter.get('/contact', function (req, res, next) {
-  res.send('contact page');
-});
+indexRouter.get('/contact', renderContactPage);
 
-indexRouter.get('/services', function (req, res, next) {
-  res.send('services page');
-});
+indexRouter.get('/services', renderServicePage);
 
 export default indexRouter;

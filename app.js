@@ -17,7 +17,11 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public/content')));
+app.use('/css', express.static(__dirname + 'content/css'));
+app.use('/assets', express.static(__dirname + 'content/assets'));
 
 app.use('/', indexRouter);
 
