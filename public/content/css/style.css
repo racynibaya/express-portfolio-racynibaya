@@ -253,12 +253,12 @@ main {
 .section--about {
   max-width: 120rem;
   padding: 3.2rem 4.8rem;
-  height: 70vh;
+  height: 72vh;
   /* background-color: blue;   */
 }
 .section--about-header {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  /* grid-template-columns: repeat(2, 1fr); */
   /* justify-content: center;
   align-content: center; */
   /* height: 90vh; */
@@ -266,7 +266,8 @@ main {
 }
 
 .about-img {
-  background: grey;
+  width: 15rem;
+  /* position: absolute; */
 }
 
 .my-description {
@@ -347,14 +348,71 @@ main {
   width: 100%;
 }
 
+/* Services */
+
+.services .container {
+  max-width: 120rem;
+  line-height: 1.2;
+  /* height: 100vh; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.container div {
+  padding: 1.2rem 1.6rem;
+}
+
+.container div p {
+  font-size: 1.2rem;
+}
+
+.services-heading {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  line-height: 1.6;
+}
+
+.heading-tertiary {
+  margin-bottom: 1.2rem;
+}
+
+.contact-container {
+  max-width: 50rem;
+  height: 10rem;
+  margin: 5rem auto 0 auto;
+  text-align: center;
+  height: 60.5vh;
+}
+
+.contact-container h2 {
+  margin-bottom: 2rem;
+}
+
+.contact-container a:link,
+.contact-container a:visited {
+  color: var(--secondary-color);
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid currentColor;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.contact-container a:hover,
+.contact-container a:active {
+  border-bottom: 2px solid transparent;
+}
+
 /* FOOTER */
 .footer {
+  font-size: 1rem;
+
   padding: 0.4rem 3rem;
   margin-top: 4rem;
   background-color: var(--primary-color);
   color: var(--secondary-color-tint);
-  display: flex;
-  justify-content: space-between;
 }
 
 @keyframes moveInRight {
