@@ -379,16 +379,12 @@ main {
   margin-bottom: 1.2rem;
 }
 
-.contact-container {
-  max-width: 50rem;
-  height: 10rem;
-  margin: 5rem auto 0 auto;
-  text-align: center;
-  height: 60.5vh;
-}
-
-.contact-container h2 {
-  margin-bottom: 2rem;
+.contact-section {
+  display: grid;
+  grid-template-columns: 40fr 60fr;
+  height: 80vh;
+  align-items: center;
+  justify-items: center;
 }
 
 .contact-container a:link,
@@ -403,6 +399,46 @@ main {
 .contact-container a:hover,
 .contact-container a:active {
   border-bottom: 2px solid transparent;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form div:last-child {
+  align-self: center;
+}
+
+.form div label {
+  display: inline-block;
+  width: 10rem;
+}
+
+.form div input {
+  width: 15rem;
+  padding: 0.5rem;
+}
+
+.form div .btn-submit {
+  display: inline-block;
+  cursor: pointer;
+  width: 10rem;
+  color: var(--secondary-color);
+  border: 1px solid currentColor;
+  padding: 0.6rem 2rem;
+  border-radius: 100px;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='submit'] {
+  outline: none;
+}
+
+:focus {
+  outline: none;
 }
 
 /* FOOTER */
