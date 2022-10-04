@@ -429,6 +429,17 @@ main {
   border: 1px solid currentColor;
   padding: 0.6rem 2rem;
   border-radius: 100px;
+  transition: all 0.3s;
+}
+
+.form div .btn-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.form div .btn-submit:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 input[type='text'],
