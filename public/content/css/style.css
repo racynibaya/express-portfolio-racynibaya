@@ -391,7 +391,6 @@ main {
 }
 
 .contact-section {
-  padding: 9.6rem 0;
   display: grid;
   grid-template-columns: 40fr 60fr;
 
@@ -417,6 +416,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  background-color: var(--secondary-color);
+  padding: 6.4rem;
+  border-radius: 15px;
 }
 
 .form div:last-child {
@@ -424,13 +426,21 @@ main {
 }
 
 .form div label {
+  display: block;
   display: inline-block;
-  width: 10rem;
+  width: 100%;
 }
 
 .form div input {
-  width: 15rem;
-  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  padding: 1.2rem 1.6rem;
+  color: var(--primary-color);
+}
+
+.form div input::placeholder {
+  color: #aaa;
 }
 
 .form div .btn-submit {
@@ -458,6 +468,7 @@ input[type='text'],
 input[type='number'],
 input[type='submit'] {
   outline: none;
+  background-color: var(--secondary-color-tint);
 }
 
 :focus {
