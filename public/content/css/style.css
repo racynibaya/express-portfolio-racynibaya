@@ -18,7 +18,7 @@ FONT SIZE SYSTEM (px)
 
 :root {
   --primary-color: #164e63;
-
+  --primary-color-tint: #457182;
   --grey-color: #cbd5e1;
 
   --secondary-color: #f87171;
@@ -97,7 +97,7 @@ body {
 .hero-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 87vh;
+
   position: relative;
 
   background-color: var(--bg-color);
@@ -197,22 +197,40 @@ body {
   z-index: 3;
 }
 
-.skills-section {
-  width: 100%;
+.skills-container {
+  padding: 0.8rem;
+  background-color: var(--primary-color-tint);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
 
-  background-color: #08242a;
+.skills {
   display: flex;
   justify-content: center;
-  column-gap: 4.8rem;
+  gap: 1.2rem;
   padding: 0.4rem;
+}
+
+.skills-text {
+  color: var(--grey-color);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.8;
 }
 
 .fa-brands {
   border-radius: 10px;
+  text-align: center;
   cursor: pointer;
-  font-size: 3rem;
-  transition: all 0.2s ease;
+  height: 2.4rem;
+  width: 2.4rem;
   color: rgb(189, 188, 188);
+
+  padding: 0.5rem;
+
+  transition: all 0.2s ease;
 }
 
 .fa-brands:hover {
@@ -252,9 +270,7 @@ main {
 /* ABOUT */
 .section--about {
   max-width: 120rem;
-  padding: 3.2rem 4.8rem;
-  height: 72vh;
-  /* background-color: blue;   */
+  padding: 4.8rem;
 }
 .section--about-header {
   display: flex;
@@ -262,7 +278,6 @@ main {
 
 .about-img {
   border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
   width: 15rem;
 }
 
@@ -271,7 +286,6 @@ main {
   color: var(--secondary-color-tint);
   padding: 4rem;
   border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
 }
 
 /* PROJECTS */
@@ -350,7 +364,7 @@ main {
 .services .container {
   max-width: 120rem;
   line-height: 1.2;
-  /* height: 100vh; */
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -379,7 +393,7 @@ main {
 .contact-section {
   display: grid;
   grid-template-columns: 40fr 60fr;
-  height: 80vh;
+
   align-items: center;
   justify-items: center;
 }
