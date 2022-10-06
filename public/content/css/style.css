@@ -114,6 +114,10 @@ body {
   color: var(--main-color);
 }
 
+.main-header {
+  max-width: 120rem;
+}
+
 .main-heading,
 .sub-heading {
   display: block;
@@ -290,16 +294,19 @@ main {
 
 /* PROJECTS */
 .project-section {
+  max-width: 120rem;
   padding: 1.2rem;
 }
 
 .project {
+  max-width: 20rem;
   border-radius: 10px;
   box-shadow: 0 3px 10px 3px rgba(0, 0, 0, 0.1);
 }
 .project-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2.4rem;
   padding-top: 4rem;
 }
