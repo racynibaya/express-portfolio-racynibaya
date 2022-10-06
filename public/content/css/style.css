@@ -258,23 +258,20 @@ main {
 }
 .section--about-header {
   display: flex;
-  /* grid-template-columns: repeat(2, 1fr); */
-  /* justify-content: center;
-  align-content: center; */
-  /* height: 90vh; */
-  gap: 4rem;
 }
 
 .about-img {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
   width: 15rem;
-  /* position: absolute; */
 }
 
 .my-description {
   background-color: var(--secondary-color);
   color: var(--secondary-color-tint);
   padding: 4rem;
-  border-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 /* PROJECTS */
