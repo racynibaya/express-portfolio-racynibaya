@@ -268,19 +268,23 @@ body {
 /* MAIN */
 main {
   padding: 0 5rem;
+  min-height: 90vh;
 }
 /* ABOUT */
 .section--about {
-  max-width: 120rem;
+  display: grid;
+
+  /* max-width: 120rem; */
   padding: 3.2rem;
 }
 .section--about-header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20fr 80fr;
 }
 
 .about-img {
   border-top-left-radius: 15px;
-  width: 15rem;
+  width: 100%;
 }
 
 .my-description {
