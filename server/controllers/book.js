@@ -5,8 +5,6 @@ import Book from '../model/book.js';
 
 export const displayBookList = (req, res, next) => {
   Book.find((err, bookList) => {
-    console.log('HAHAHAHA');
-    console.log(bookList);
     if (err) {
       return console.error(err);
     } else {

@@ -1,4 +1,4 @@
-import app from './app.js';
+import app from './server/config/app.js';
 import debug from 'debug';
 debug('expressjs-portfolio:server');
 
