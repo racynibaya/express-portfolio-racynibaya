@@ -512,6 +512,24 @@ input[type="submit"] {
 
 .form-group input {
   padding: 1.2rem 3.2rem;
+  font-family: inherit;
+  border: none;
+
+  /* line-height: 1.8; */
+}
+
+.btn-success,
+.btn-warning {
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: all 0.5s;
+  padding: 0.5rem;
+  line-height: 1 !important;
+}
+
+.form-control {
+  border-radius: 10px;
 }
 
 .register:link,
