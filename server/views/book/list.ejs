@@ -18,14 +18,14 @@
       <th class="text-content col-1"></th>
       <%}%>
     </tr>
-    <% for(let count = 0; count < BookList.length; count++){ %> <%=
-    console.log(count);
+    <% for(let count = 0; count < BookList.length; count++) { %>
     <tr>
       <td class="text-center col-2"><%=BookList[count].name%></td>
       <td class="text-center col-2"><%=BookList[count].author%></td>
       <td class="text-center col-1"><%=BookList[count].published%></td>
       <td class="col-6"><%=BookList[count].description%></td>
       <td class="text-center col-1"><%=BookList[count].price%></td>
+
       <%if(typeof displayName =='string' && displayName){%>
       <td class="text-center col-1">
         <a
@@ -43,5 +43,6 @@
       </td>
       <%}%>
     </tr>
+    <%}%>
   </table>
 </div>
