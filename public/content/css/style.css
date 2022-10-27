@@ -513,6 +513,7 @@ input[type='submit'] {
 .form-login {
   display: flex;
   background-color: #fff;
+  width: 30rem;
 }
 
 .form-group:not(:last-child) {
@@ -535,10 +536,10 @@ form-group:last-child {
 
 .form-group input {
   width: 100%;
-  padding: 1.2rem 3.2rem;
+  padding: 1.2rem;
   font-family: inherit;
   border: none;
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.8rem;
   background-color: var(--secondary-color-tint);
   /* line-height: 1.8; */
 }
@@ -558,6 +559,7 @@ form-group:last-child {
   line-height: 1 !important;
   background-color: var(--primary-color-tint) !important;
   color: #fff;
+  margin-bottom: 0.8rem !important;
 }
 
 .form-control {
@@ -566,18 +568,32 @@ form-group:last-child {
 
 .register:link,
 .register:visited {
+  text-transform: uppercase;
+  font-size: 0.8rem;
   text-decoration: none;
   color: currentColor;
+  border-bottom: 2px solid currentColor;
+  transition: all 0.2s;
 }
 
 .register-row {
+  /* max-width: 40rem; */
   min-height: 100vh;
   display: grid;
   align-items: center;
   justify-content: center;
 }
 
-.margin-bottom-m {
+.login-register {
+  width: 6.5rem !important;
+}
+
+.login-register:hover,
+.login-register:active {
+  border-bottom: 2px solid transparent;
+}
+
+.form-group .margin-bottom-m {
   margin-bottom: 2.4rem;
 }
 

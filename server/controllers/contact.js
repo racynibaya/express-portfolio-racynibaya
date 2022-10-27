@@ -1,16 +1,16 @@
 import express from 'express';
 let router = express.Router();
 import mongoose from 'mongoose';
-import Book from '../model/book.js';
+import Contact from '../model/contact.js';
 
-export const displayBookList = (req, res, next) => {
-  Book.find((err, bookList) => {
+export const displayContactList = (req, res, next) => {
+  Contact.find((err, contactList) => {
     if (err) {
       return console.error(err);
     } else {
-      res.render('book/list', {
-        title: 'Books',
-        BookList: bookList,
+      res.render('contact/list', {
+        title: 'Contacts',
+        ContactList: contactList,
         displayName: req.user ? req.user.displayName : '',
       });
     }
@@ -18,38 +18,37 @@ export const displayBookList = (req, res, next) => {
 };
 
 export const displayAddPage = (req, res, next) => {
-  res.render('book/add', {
+  res.render('contact/add', {
     title: 'Add Book',
     displayName: req.user ? req.user.displayName : '',
   });
 };
 
 export const processAddPage = (req, res, next) => {
-  let newBook = Book({
+  let newContact = Contact({
     name: req.body.name,
-    author: req.body.author,
-    published: req.body.published,
     description: req.body.description,
-    price: req.body.price,
+    email: req.body.email,
+    number: req.body.price,
   });
-  Book.create(newBook, (err, Book) => {
+  Contact.create(newBook, (err, Book) => {
     if (err) {
       console.log(err);
       res.end(err);
     } else {
-      res.redirect('/bookList');
+      res.redirect('/contactList');
     }
   });
 };
 
 export const displayEditPage = (req, res, next) => {
   let id = req.params.id;
-  Book.findById(id, (err, bookToEdit) => {
+  Contact.findById(id, (err, bookToEdit) => {
     if (err) {
       console.log(err);
       res.end(err);
     } else {
-      res.render('book/edit', {
+      res.render('contact/edit', {
         title: 'Edit Book',
         book: bookToEdit,
         displayName: req.user ? req.user.displayName : '',
@@ -69,24 +68,24 @@ export const processEditPage = (req, res, next) => {
     description: req.body.description,
     price: req.body.price,
   });
-  Book.updateOne({ _id: id }, updatedBook, err => {
+  Contact.updateOne({ _id: id }, updatedBook, err => {
     if (err) {
       console.log(err);
       res.end(err);
     } else {
-      res.redirect('/bookList');
+      res.redirect('/contactList');
     }
   });
 };
 
 export const performDelete = (req, res, next) => {
   let id = req.params.id;
-  Book.remove({ _id: id }, err => {
+  Contact.remove({ _id: id }, err => {
     if (err) {
       console.log(err);
       res.end(err);
     } else {
-      res.redirect('/bookList');
+      res.redirect('/contactList');
     }
   });
 };

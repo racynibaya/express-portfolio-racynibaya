@@ -14,7 +14,7 @@ import { fileURLToPath } from 'url';
 
 import indexRouter from '../routes/index.router.js';
 import usersRouter from '../routes/users.js';
-import booksRouter from '../routes/book.js';
+import contactsRouter from '../routes/contact.js';
 
 import { User } from '../model/user.js';
 
@@ -65,7 +65,7 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/bookList', booksRouter);
+app.use('/contactList', contactsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

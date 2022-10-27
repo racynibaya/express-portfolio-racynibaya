@@ -32,6 +32,7 @@
     "@types/passport": "^1.0.11",
     "@types/passport-local": "^1.0.34",
     "@types/passport-local-mongoose": "^6.1.1",
+    "dotenv": "^16.0.3",
     "nodemon": "^2.0.20"
   },
   "main": "app.js",
