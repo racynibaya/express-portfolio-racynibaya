@@ -524,29 +524,35 @@ input[type='submit'] {
 
 .form-group.text-right {
   border: none;
-  display: grid;
+  display: grid !important;
   grid-template-columns: 1fr 1fr;
   gap: 1.2rem;
 }
-form-group:last-child {
+
+.form-group:last-child {
   border: 2px solid transparent;
   display: flex;
   gap: 2rem;
 }
 
+.form-group:not(:last-child) {
+  margin-bottom: 1.8rem;
+}
 .form-group input {
   width: 100%;
   padding: 1.2rem;
   font-family: inherit;
   border: none;
-  margin-bottom: 1.8rem;
+
   background-color: var(--secondary-color-tint);
   /* line-height: 1.8; */
+  font-size: 1.2rem;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
 }
 
 .btn-success,
@@ -559,7 +565,6 @@ form-group:last-child {
   line-height: 1 !important;
   background-color: var(--primary-color-tint) !important;
   color: #fff;
-  margin-bottom: 0.8rem !important;
 }
 
 .form-control {
