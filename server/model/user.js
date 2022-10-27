@@ -1,15 +1,15 @@
 //require modules for the user model
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
-import passportLocalMongoose from 'passport-local-mongoose';
+import passportLocalMongoose from "passport-local-mongoose";
 
 let user = mongoose.Schema(
   {
     username: {
       type: String,
-      default: '',
+      default: "",
       trim: true,
-      required: 'username is required',
+      required: "username is required",
     },
     /*
         password:
@@ -29,15 +29,15 @@ let user = mongoose.Schema(
         },*/
     email: {
       type: String,
-      default: '',
+      default: "",
       trim: true,
-      required: 'email is required',
+      required: "email is required",
     },
     displayName: {
       type: String,
-      default: '',
+      default: "",
       trim: true,
-      required: 'DisplayName is required',
+      required: "DisplayName is required",
     },
     created: {
       type: Date,
@@ -50,11 +50,11 @@ let user = mongoose.Schema(
     },
   },
   {
-    collection: 'users',
+    collection: "users",
   }
 );
 //configure options for user model.
-let options = { missingPasswordError: 'wrong/Missing Password' };
+let options = { missingPasswordError: "wrong/Missing Password" };
 user.plugin(passportLocalMongoose, options);
 
-export const User = mongoose.model('user', user);
+export const User = mongoose.model("user", user);

@@ -1,12 +1,13 @@
+<%- include('../components/head.ejs')%>
 <main class="container">
   <!--message Area-->
-  <% if (messages.length>0){%>
+  <% if (messages.length > 0){%>
   <div class="alert alert-danger"><%=messages%></div>
   <%}%>
-  <div class="row">
+  <div class="login-row">
     <div class="offset md-4 col-md-4">
-      <h1>Please login</h1>
-      <form method="POST" autocomplete="off">
+      <h1 class="login-heading">Please login</h1>
+      <form method="POST" autocomplete="off" class="form form-login">
         <fieldset class="form-group">
           <label for="username">username:</label>
           <input
@@ -30,8 +31,6 @@
             id="password"
             required
           />
-          or
-          <a href="/register">Register Here</a>
         </fieldset>
 
         <fieldset class="form-group text-right">
@@ -39,10 +38,9 @@
           <a href="/">
             <input type="button" class="btn btn-warning" value="cancel" />
           </a>
+          <a href="/register" class="register">Register Here</a>
         </fieldset>
       </form>
     </div>
   </div>
 </main>
-<script src="/jquery/dist/jquery.min.js"></script>
-<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
