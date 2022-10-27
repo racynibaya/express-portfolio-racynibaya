@@ -100,6 +100,7 @@ export const processRegisterPage = (req, res, next) => {
     email: req.body.email,
     displayName: req.body.displayName,
   });
+
   User.register(newUser, req.body.password, err => {
     if (err) {
       console.log('Error:inserting New User');
