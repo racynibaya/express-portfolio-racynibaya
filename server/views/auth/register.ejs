@@ -1,11 +1,13 @@
-<main class="container">
+<%- include('../components/head.ejs')%>
+
+<main class="container register-row">
   <!--message Area-->
   <% if (messages.length>0){%>
   <div class="alert alert-danger"><%=messages%></div>
   <%}%>
   <div class="row">
-    <div class="offset md-4 col-md-4">
-      <h1>Please Register</h1>
+    <div class="">
+      <h1 class="margin-bottom-m">Please Register</h1>
       <form method="POST" autocomplete="off">
         <fieldset class="form-group">
           <label for="username">username:</label>

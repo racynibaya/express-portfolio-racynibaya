@@ -1,4 +1,5 @@
 import { User } from '../model/user.js';
+import passport from 'passport';
 
 export const renderRootPage = function (req, res) {
   res.render('index', {

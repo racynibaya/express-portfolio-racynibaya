@@ -26,7 +26,7 @@
       <td class="col-6"><%=BookList[count].description%></td>
       <td class="text-center col-1"><%=BookList[count].price%></td>
 
-      <%if(typeof displayName =='string' && displayName){%>
+      <%if(typeof displayName =='string' && displayName) {%>
       <td class="text-center col-1">
         <a
           href="/bookList/edit/<%=BookList[count]._id%>"

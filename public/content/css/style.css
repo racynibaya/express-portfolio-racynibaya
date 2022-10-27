@@ -32,7 +32,7 @@ html {
 }
 
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   line-height: 1.7;
   letter-spacing: 0.5px;
   background-color: var(--bg-color);
@@ -172,7 +172,7 @@ body {
 }
 
 .btn::after {
-  content: "";
+  content: '';
   display: block;
   height: 100%;
   width: 100%;
@@ -423,12 +423,17 @@ main {
   border-bottom: 2px solid transparent;
 }
 
+.contact-form {
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+}
 .form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  /* gap: 2rem; */
   background-color: var(--secondary-color);
-  padding: 6.4rem;
+  padding: 2.4rem;
   border-radius: 15px;
 }
 
@@ -440,6 +445,7 @@ main {
   display: block;
   display: inline-block;
   width: 100%;
+  margin-bottom: 0.8rem;
 }
 
 .form div input {
@@ -475,9 +481,13 @@ main {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
-input[type="text"],
-input[type="number"],
-input[type="submit"] {
+.form div {
+  margin-bottom: 1.6rem;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='submit'] {
   outline: none;
   background-color: var(--secondary-color-tint);
 }
@@ -502,20 +512,40 @@ input[type="submit"] {
 
 .form-login {
   display: flex;
+  background-color: #fff;
 }
 
-.form-group {
-  display: flex;
+.form-group:not(:last-child) {
+  justify-content: center;
   gap: 3rem;
   border: 2px solid transparent;
 }
 
+.form-group.text-right {
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+form-group:last-child {
+  border: 2px solid transparent;
+  display: flex;
+  gap: 2rem;
+}
+
 .form-group input {
+  width: 100%;
   padding: 1.2rem 3.2rem;
   font-family: inherit;
   border: none;
-
+  margin-bottom: 2.4rem;
+  background-color: var(--secondary-color-tint);
   /* line-height: 1.8; */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
 }
 
 .btn-success,
@@ -526,6 +556,8 @@ input[type="submit"] {
   transition: all 0.5s;
   padding: 0.5rem;
   line-height: 1 !important;
+  background-color: var(--primary-color-tint) !important;
+  color: #fff;
 }
 
 .form-control {
@@ -536,6 +568,17 @@ input[type="submit"] {
 .register:visited {
   text-decoration: none;
   color: currentColor;
+}
+
+.register-row {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.margin-bottom-m {
+  margin-bottom: 2.4rem;
 }
 
 /* FOOTER */
